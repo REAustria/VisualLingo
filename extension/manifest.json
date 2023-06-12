@@ -1,0 +1,32 @@
+{
+    "name": "VisualLingo",
+    "description": "An extension to identify Filipino Hand Gestures",
+    "version": "1.0",
+    "manifest_version": 3,
+    "content_scripts": [{
+        "matches": [
+            "https://meet.google.com/*"
+        ],
+        "js": [
+            "src/scripts/tf.min.js",
+            "src/scripts/teachablemachine-pose.min.js",
+            "src/scripts/core.js"
+        ]
+    }],
+      "permissions": [
+        "tabs",
+        "storage"
+      ],
+      "action": {
+        "default_popup": "src/popup/popup.html",
+        "default_icon": {
+            "16": "icons/icon.png",
+            "48": "icons/icon.png",
+            "128": "icons/icon.png"
+          }
+      },
+      "background": {
+        "service_worker": "src/scripts/background.js"
+      }
+}
+    
