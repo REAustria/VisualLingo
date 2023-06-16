@@ -1,4 +1,4 @@
-const URL = "https://teachablemachine.withgoogle.com/models/RsmtNWV67/";
+const URL = "https://teachablemachine.withgoogle.com/models/W-0kC6yKL/";
 let model, webcam, ctx, labelContainer, maxPredictions;
 
 
@@ -134,8 +134,18 @@ async function predict() {
     
     if ('speechSynthesis' in window) {
       // Speech Synthesis supported 🎉
-      if (event === "Peace") {
-        let word = "Peace";
+
+      //  ADD EVENT HERE!!!
+      if (event === "Default") {
+        let word = "";
+        console.log("Probability of "+ word + " = "+ maxProbability);
+        debounce(speakTheWord(word, maxProbability),3000);
+      }else if ( event === "A"){
+        let word = "A";
+        console.log("Probability of "+ word + " = "+ maxProbability);
+        debounce(speakTheWord(word, maxProbability),3000);
+      }else if ( event === "B"){
+        let word = "B";
         console.log("Probability of "+ word + " = "+ maxProbability);
         debounce(speakTheWord(word, maxProbability),3000);
       }
