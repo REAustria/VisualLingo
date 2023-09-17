@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visual Lingo</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+
+    <title>VisualLingo</title>
 </head>
 <style>
     *{
@@ -28,11 +30,11 @@
         text-align: center;
         margin-bottom: 0.5rem;
     }
-    section.buttons{
+    section.description{
         width: 100%;
     }
     button{
-        margin: 0.2rem 0;
+        margin: 0.5rem 0;
         padding: 1rem 2rem;
         width: 100%;
         border: none;
@@ -48,24 +50,35 @@
 
     /* Enabled style */
     .enabled {
-    background-color: green;
+    background-color: rgb(13, 190, 13);
     }
 
     /* Disabled style */
     .disabled {
-    background-color: red;
+    background-color: rgb(235, 54, 38);
     }
+
 
 </style>
 <body>
     <div id="app">
         <section class="header">
-            <h1>Visual Lingo</h1>
+            <img src="..\..\icons\Visuallingo.png" alt="VisualLingo" width="50" height="50">
+            <h1>VisualLingo</h1>
+            <h6>Sign Language to Speech</h6>
         </section>
        
         <section class="button">
-            <button id="enableButton" class="enabled">Enable</button>
-            <button id="disableButton" class="disabled">Disable</button>
+                <button id="enableButton" class="enabled">
+                    <i class="fa fa-power-off"></i>
+                </button>
+                <button id="disableButton" class="disabled">
+                    <i class="fa fa-power-off"></i>
+                </button>
+        </section>
+
+        <section class="description">
+            <hr><h6>Version 1.0.0</h6>
         </section>
     </div>
 </body>

@@ -1,5 +1,4 @@
-const URL = "https://teachablemachine.withgoogle.com/models/W-0kC6yKL/";
-const URL2 = "https://teachablemachine.withgoogle.com/models/3s8hwgKSS/";
+const URL = "https://teachablemachine.withgoogle.com/models/oJtzTPnMT/";
 let model, webcam, ctx, labelContainer, maxPredictions;
 
 
@@ -79,11 +78,9 @@ async function init(isEnable) {
 
     const modelURL = URL + "model.json";
     const metadataURL = URL + "metadata.json";
-    const modelURL2 = URL2 + "model.json";
-    const metadataURL2 = URL2 + "metadata.json";
 
 
-    model = await tmPose.load(modelURL, metadataURL, modelURL2, metadataURL2);
+    model = await tmPose.load(modelURL, metadataURL);
     maxPredictions = model.getTotalClasses();
 
 
@@ -137,105 +134,36 @@ async function predict() {
     
     if ('speechSynthesis' in window) {
       // Speech Synthesis supported 🎉
-
-      //  ADD EVENT HERE!!!
       if (event === "Default") {
         let word = "Default";
+        console.log("Probability of " + word + " = "+ maxProbability);
+        debounce(speakTheWord(word, maxProbability),3000);
+      }else if (event === "Name") {
+        let word = "Pangalan";
+        console.log("Probability of " + word + " = "+ maxProbability);
+        debounce(speakTheWord(word, maxProbability),3000);
+      }else if(event === "Right") {
+        let word = "Kanan";
+        console.log("Probability of " + word + " = "+ maxProbability);
+        debounce(speakTheWord(word, maxProbability),3000);
+      }else if(event === "Left") {
+        let word = "Kaliwa";
+        console.log("Probability of " + word + " = "+ maxProbability);
+        debounce(speakTheWord(word, maxProbability),3000);
+      }else if(event === "You") {
+        let word = "Mo";
         console.log("Probability of "+ word + " = "+ maxProbability);
-        debounce(speakTheWord("", maxProbability),3000);
-      }else if ( event === "Ako"){
+        debounce(speakTheWord(word, maxProbability),3000);
+      }else if(event === "Me") {
         let word = "Ako";
         console.log("Probability of "+ word + " = "+ maxProbability);
         debounce(speakTheWord(word, maxProbability),3000);
-      }else if ( event === "I Don't Know"){
-        let word = "I Don't Know";
-        console.log("Probability of "+ word + " = "+ maxProbability);
-        debounce(speakTheWord(word, maxProbability),3000);
-      }else if ( event === "Mama"){
-        let word = "Mama";
-        console.log("Probability of "+ word + " = "+ maxProbability);
-        debounce(speakTheWord(word, maxProbability),3000);
-      }else if ( event === "Papa"){
-        let word = "Papa";
-        console.log("Probability of "+ word + " = "+ maxProbability);
-        debounce(speakTheWord(word, maxProbability),3000);
-      }else if ( event === "I Don't Understand"){
-        let word = "I Don't Understand";
-        console.log("Probability of "+ word + " = "+ maxProbability);
-        debounce(speakTheWord(word, maxProbability),3000);
-      }else if ( event === "Family"){
-        let word = "Family";
-        console.log("Probability of "+ word + " = "+ maxProbability);
-        debounce(speakTheWord(word, maxProbability),3000);
-      }else if ( event === "Bakit"){
-        let word = "Bakit";
-        console.log("Probability of "+ word + " = "+ maxProbability);
-        debounce(speakTheWord(word, maxProbability),3000);
-      }else if ( event === "LGBTQ"){
-        let word = "LGBTQ";
-        console.log("Probability of "+ word + " = "+ maxProbability);
-        debounce(speakTheWord(word, maxProbability),3000);
-      }else if ( event === "Kanila"){
-        let word = "Kanila";
-        console.log("Probability of "+ word + " = "+ maxProbability);
-        debounce(speakTheWord(word, maxProbability),3000);
-      }else if ( event === "Salamat"){
+      }else if(event === "Thank You") {
         let word = "Salamat";
         console.log("Probability of "+ word + " = "+ maxProbability);
         debounce(speakTheWord(word, maxProbability),3000);
-      }else if ( event === "Bible"){
-        let word = "Bible";
-        console.log("Probability of "+ word + " = "+ maxProbability);
-        debounce(speakTheWord(word, maxProbability),3000);
-      }else if ( event === "Problem"){
-        let word = "Problem";
-        console.log("Probability of "+ word + " = "+ maxProbability);
-        debounce(speakTheWord(word, maxProbability),3000);
-      }else if ( event === "Relate"){
-        let word = "Relate";
-        console.log("Probability of "+ word + " = "+ maxProbability);
-        debounce(speakTheWord(word, maxProbability),3000);
-      }else if ( event === "Hindi"){
-        let word = "Hindi";
-        console.log("Probability of "+ word + " = "+ maxProbability);
-        debounce(speakTheWord(word, maxProbability),3000);
-      }else if ( event === "Matanggap"){
-        let word = "Matanggap";
-        console.log("Probability of "+ word + " = "+ maxProbability);
-        debounce(speakTheWord(word, maxProbability),3000);
-      }else if ( event === "How"){
-        let word = "How";
-        console.log("Probability of "+ word + " = "+ maxProbability);
-        debounce(speakTheWord(word, maxProbability),3000);
-      }else if ( event === "Paliwanag"){
-        let word = "Paliwanag";
-        console.log("Probability of "+ word + " = "+ maxProbability);
-        debounce(speakTheWord(word, maxProbability),3000);
-      }else if ( event === "Anak"){
-        let word = "Anak";
-        console.log("Probability of "+ word + " = "+ maxProbability);
-        debounce(speakTheWord(word, maxProbability),3000);
-      }else if ( event === "Pagmamahal"){
-        let word = "Pagmamahal";
-        console.log("Probability of "+ word + " = "+ maxProbability);
-        debounce(speakTheWord(word, maxProbability),3000);
-      }else if ( event === "Huli"){
-        let word = "Huli";
-        console.log("Probability of "+ word + " = "+ maxProbability);
-        debounce(speakTheWord(word, maxProbability),3000);
-      }else if ( event === "Payo"){
-        let word = "Payo";
-        console.log("Probability of "+ word + " = "+ maxProbability);
-        debounce(speakTheWord(word, maxProbability),3000);
       }else{
-        // Speech Synthesis Not Supported 😣
-        alert("Sorry, your browser doesn't support text to speech!");
+        // No word matched 😣
+        alert("Sorry, I didn't understand that!");
       }
-}
-
-
-
-
-
-
-}
+}}

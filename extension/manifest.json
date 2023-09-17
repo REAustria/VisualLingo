@@ -1,6 +1,6 @@
 {
     "name": "VisualLingo",
-    "description": "An extension to identify Filipino Hand Gestures",
+    "description": "An extension for Google Meet to translate the Filipino Sign Language to help the Filipino mute community.",
     "version": "1.0",
     "manifest_version": 3,
     "content_scripts": [{

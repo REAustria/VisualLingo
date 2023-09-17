@@ -1,10 +1,10 @@
 {
-  "name": "empty-project",
+  "name": "visuallingo-project",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "keywords": [],
-  "author": "",
+  "author": "Austria, Renz Edwin;/nAustria, Renz Gerald;",
   "license": "ISC",
   "scripts": {
     "clean": "rm extension/content.js extension/content.js.map",
@@ -19,5 +19,8 @@
     "terser-webpack-plugin": "^5.3.7",
     "webpack": "^5.76.2",
     "webpack-cli": "^5.0.1"
+  },
+  "dependencies": {
+    "@tensorflow/tfjs": "^4.10.0"
   }
 }
