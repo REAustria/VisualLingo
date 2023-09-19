@@ -1,4 +1,4 @@
-const URL = "https://teachablemachine.withgoogle.com/models/RsmtNWV67/";
+const URL = "https://teachablemachine.withgoogle.com/models/5Hd2hT_eD/";
 let model, webcam, ctx, labelContainer, maxPredictions;
 
 
@@ -134,20 +134,36 @@ async function predict() {
     
     if ('speechSynthesis' in window) {
       // Speech Synthesis supported 🎉
-      if (event === "Peace") {
-        let word = "Peace";
+      if (event === "Default") {
+        let word = "Default";
+        console.log("Probability of " + word + " = "+ maxProbability);
+        debounce(speakTheWord("", maxProbability),3000);
+      }else if (event === "Ano") {
+        let word = "Ano";
+        console.log("Probability of " + word + " = "+ maxProbability);
+        debounce(speakTheWord(word, maxProbability),3000);
+      }else if(event === "Kailan") {
+        let word = "Kailan";
+        console.log("Probability of " + word + " = "+ maxProbability);
+        debounce(speakTheWord(word, maxProbability),3000);
+      }else if(event === "Saan") {
+        let word = "Saan";
+        console.log("Probability of " + word + " = "+ maxProbability);
+        debounce(speakTheWord(word, maxProbability),3000);
+      }else if(event === "Bakit") {
+        let word = "Bakit";
         console.log("Probability of "+ word + " = "+ maxProbability);
         debounce(speakTheWord(word, maxProbability),3000);
-      }
+      }else if(event === "Sino") {
+        let word = "Sino";
+        console.log("Probability of "+ word + " = "+ maxProbability);
+        debounce(speakTheWord(word, maxProbability),3000);
+      }else if(event === "Hello") {
+        let word = "Kumusta";
+        console.log("Probability of "+ word + " = "+ maxProbability);
+        debounce(speakTheWord(word, maxProbability),3000);
       }else{
-        // Speech Synthesis Not Supported 😣
-        alert("Sorry, your browser doesn't support text to speech!");
+        // No word matched 😣
+        alert("Sorry, I didn't understand that!");
       }
-}
-
-
-
-
-
-
-
+}}
