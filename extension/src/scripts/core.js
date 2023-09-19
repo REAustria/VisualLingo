@@ -1,4 +1,5 @@
-const URL = "https://teachablemachine.withgoogle.com/models/oJtzTPnMT/";
+//const URL = "https://teachablemachine.withgoogle.com/models/EID8uSo4S/";
+const URL = "https://teachablemachine.withgoogle.com/models/5Hd2hT_eD/";
 let model, webcam, ctx, labelContainer, maxPredictions;
 
 
@@ -137,29 +138,29 @@ async function predict() {
       if (event === "Default") {
         let word = "Default";
         console.log("Probability of " + word + " = "+ maxProbability);
-        debounce(speakTheWord(word, maxProbability),3000);
-      }else if (event === "Name") {
-        let word = "Pangalan";
+        debounce(speakTheWord("", maxProbability),3000);
+      }else if (event === "Ano") {
+        let word = "Ano";
         console.log("Probability of " + word + " = "+ maxProbability);
         debounce(speakTheWord(word, maxProbability),3000);
-      }else if(event === "Right") {
-        let word = "Kanan";
+      }else if(event === "Kailan") {
+        let word = "Kailan";
         console.log("Probability of " + word + " = "+ maxProbability);
         debounce(speakTheWord(word, maxProbability),3000);
-      }else if(event === "Left") {
-        let word = "Kaliwa";
+      }else if(event === "Saan") {
+        let word = "Saan";
         console.log("Probability of " + word + " = "+ maxProbability);
         debounce(speakTheWord(word, maxProbability),3000);
-      }else if(event === "You") {
-        let word = "Mo";
+      }else if(event === "Bakit") {
+        let word = "Bakit";
         console.log("Probability of "+ word + " = "+ maxProbability);
         debounce(speakTheWord(word, maxProbability),3000);
-      }else if(event === "Me") {
-        let word = "Ako";
+      }else if(event === "Sino") {
+        let word = "Sino";
         console.log("Probability of "+ word + " = "+ maxProbability);
         debounce(speakTheWord(word, maxProbability),3000);
-      }else if(event === "Thank You") {
-        let word = "Salamat";
+      }else if(event === "Hello") {
+        let word = "Kumusta";
         console.log("Probability of "+ word + " = "+ maxProbability);
         debounce(speakTheWord(word, maxProbability),3000);
       }else{
