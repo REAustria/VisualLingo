@@ -138,27 +138,27 @@ async function predict() {
         let word = "Default";
         console.log("Probability of " + word + " = "+ maxProbability);
         debounce(speakTheWord("", maxProbability),3000);
-      }else if (event === "Ano") {
+      }else if (event === "Ano") { //What
         let word = "Ano";
         console.log("Probability of " + word + " = "+ maxProbability);
         debounce(speakTheWord(word, maxProbability),3000);
-      }else if(event === "Kailan") {
+      }else if(event === "Kailan") { //When
         let word = "Kailan";
         console.log("Probability of " + word + " = "+ maxProbability);
         debounce(speakTheWord(word, maxProbability),3000);
-      }else if(event === "Saan") {
+      }else if(event === "Saan") { //Where
         let word = "Saan";
         console.log("Probability of " + word + " = "+ maxProbability);
         debounce(speakTheWord(word, maxProbability),3000);
-      }else if(event === "Bakit") {
+      }else if(event === "Bakit") { //Why
         let word = "Bakit";
         console.log("Probability of "+ word + " = "+ maxProbability);
         debounce(speakTheWord(word, maxProbability),3000);
-      }else if(event === "Sino") {
+      }else if(event === "Sino") { //Who
         let word = "Sino";
         console.log("Probability of "+ word + " = "+ maxProbability);
         debounce(speakTheWord(word, maxProbability),3000);
-      }else if(event === "Hello") {
+      }else if(event === "Hello") { //Hello
         let word = "Kumusta";
         console.log("Probability of "+ word + " = "+ maxProbability);
         debounce(speakTheWord(word, maxProbability),3000);
