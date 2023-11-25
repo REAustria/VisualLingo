@@ -1,7 +1,7 @@
 {
     "name": "VisualLingo",
-    "description": "An extension for Google Meet to translate the Filipino Sign Language to help the Filipino mute community.",
-    "version": "1.0",
+    "description": "Experience seamless communication in Google Meet with VisualLingo! Our innovative extension uses TensorFlow to translate Filipino Sign Language into spoken words in real time. Enhance inclusivity and accessibility in your meetings as VisualLingo bridges the gap between sign language users and verbal communication. Effortlessly understand and respond to sign language cues, fostering a more connected and inclusive virtual environment.",
+    "version": "1.0.0",
     "manifest_version": 3,
     "content_scripts": [{
         "matches": [
