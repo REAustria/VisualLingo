@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "openai": "^4.20.0"
+  },
+  "name": "visuallingo",
+  "version": "1.0.0",
+  "main": "content.js",
+  "devDependencies": {},
+  "scripts": {
+    "run": "node openai_mp3_generator.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "type": "module"
+}

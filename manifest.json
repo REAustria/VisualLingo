@@ -32,6 +32,11 @@
       },
       "background": {
         "service_worker": "src/scripts/background.js"
-      }
+      },
+      "web_accessible_resources": [
+        {
+          "resources": [ "src/words/*" ],
+          "matches": [ "*://*/*" ]
+        }
+       ]
 }
-    
