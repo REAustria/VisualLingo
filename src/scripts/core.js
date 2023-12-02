@@ -225,7 +225,7 @@ async function predict() {
       console.log("Probability of " + word + " = " + maxProbability);
       debounce(playTheWord(word, maxProbability), 3000);
     } else if (event === "Kumusta") {
-      audio = new Audio(chrome.runtime.getURL("src/words/kumusta.mp3"));
+      audio = new Audio(chrome.runtime.getURL("src/words/opus format/kumusta.opus"));
       let word = "Kumusta";
       console.log("Probability of " + word + " = " + maxProbability);
       debounce(playTheWord(word, maxProbability), 3000);

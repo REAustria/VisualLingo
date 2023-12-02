@@ -12,6 +12,7 @@
         box-sizing: border-box;
         margin: 0;
         padding: 0;
+        
     }
     body{
         background-color: #fff;
@@ -24,25 +25,6 @@
         min-width: 300px;
         padding: 1rem;
         color: #333;
-    }
-    .card {
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      padding: 20px;
-      width: 100%; /* Adjust width as needed */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      background-color: #fff;
-      /* margin: 20px; */
-    }
-    /* Style for the card title */
-    .card-title {
-      font-size: 1.5em;
-      margin-bottom: 10px;
-    }
-    /* Style for the card content */
-    .card-content {
-      font-size: 1.1em;
-      color: #333;
     }
     section.header{
         /* font-size: 1.3rem; */
@@ -100,11 +82,6 @@
         color: rgb(235, 54, 38);
     }
 
-    ul {
-      list-style: none; /* Removes default list bullets */
-      padding: 0; /* Removes default padding */
-      margin: 0; /* Removes default margin */
-    }
 </style>
 <body>
     <div id="app">
@@ -114,37 +91,23 @@
             <h4>Filipino Sign Language to Speech Google Meet Extension</h4>
         </section>
        
-        <section class="button">
-                <button id="enableButton" class="disabled">
-                    <i class="fa fa-power-off" title="Turn on extension"></i>
-                </button>
-                <button id="disableButton" class="enabled">
-                    <i class="fa fa-power-off" title="Turn off extension"></i>
-                </button>
-        </section>
-
         <section class="description">
-            <div class="card">
-                <h2 class="card-title">Instructions</h2>
-                <p class="card-content">
-                    <ul>
-                        <li>Austria, RE</li>
-                        <li>Austria, RG</li>
-                        <li>Torrea, SI</li>
-                    </ul>
+                <h2 >VisualLingo</h2>
+                
+                <p>A browser extension designed to assist vocally impaired individuals during Google Meet sessions. 
+                This innovative tool, created as a thesis requirement, offers real-time speech-to-text conversion, breaking down 
+                communication barriers and fostering inclusivity in virtual meetings.
                 </p>
-              </div>
-            <div class="card">
-                <h2 class="card-title">About Us</h2>
-                <p class="card-content">
-                    Developed by BS Computer Science students from Cavite State University, VisualLingo is a browser extension designed to assist vocally impaired individuals during Google Meet sessions. This innovative tool, created as a thesis requirement, offers real-time speech-to-text conversion, breaking down communication barriers and fostering inclusivity in virtual meetings.
-                </p>
-              </div>
         </section>
 
-        <section class="footer">
-            <hr><h5>Version 1.0.0 | VisualLingo (2023)</h5>
-        </section>
+        <section class="button">
+            <button id="enableButton" class="disabled">
+                <i class="fa fa-power-off" title="Turn on extension"></i>
+            </button>
+            <button id="disableButton" class="enabled">
+                <i class="fa fa-power-off" title="Turn off extension"></i>
+            </button>
+    </section>
     </div>
 </body>
 <script src="popup.js"  type="module"></script>
