@@ -1,76 +1,51 @@
-# Chrome Extension Boilerplate with Manifest 3
-This is a basic boilerplate for creating a Chrome Extension with Manifest 3. It includes the necessary files and folder structure to get started quickly.
+# VisualLingo
 
-## Folder Structure
-The folder structure is as follows:
+![VisualLingo Logo](link-to-your-logo.png)
 
-```
-my-extension/
-├── extension/
-│   ├── background.js
-│   ├── content.js
-│   ├── icons/
-│   │   ├── icon16.png
-│   │   ├── icon32.png
-│   │   ├── icon48.png
-│   │   └── icon128.png
-│   ├── popup/
-│   │   ├── popup.html
-│   │   └── popup.js
-│   └── manifest.json
-├── src/
-│   └── // source files for the extension
-├── webpack.config.js
-├── babel.config.js
-├── package.json
-└── node_modules/
-    └── // dependencies installed by npm
+VisualLingo is a browser extension developed by BS Computer Science students from Cavite State University - Don Severino de las Alas Campus. This innovative tool is designed to assist vocally impaired individuals in communicating effectively during Google Meet sessions.
 
-```
+## Features
+
+- **Text-to-Speech**: Effortlessly convert text input into spoken words for seamless communication.
+  
+- **Sign Language Translation**: Real-time translation of sign language gestures into Filipino words using advanced image recognition algorithms.
 
 ## Getting Started
-To use this boilerplate, follow these steps:
 
-- Clone the repository or download the ZIP file.
-- Edit manifest.json file to add the required information about the extension.
-- Customize popup.html as per your needs.
-- Add your own JavaScript code in src/index.js.
-- Load the extension in Chrome by navigating to chrome://extensions, enabling "Developer mode" in the top right corner, and then clicking on "Load unpacked" and selecting the folder that contains the extension files.
+### Installation
 
-### Manifest.json
-The manifest.json file is the main configuration file for the extension. It contains information such as the extension's name, version, description, icons, permissions, and background scripts.
+To use VisualLingo, follow these simple steps:
 
-Make sure to update the fields in manifest.json with the appropriate values for your extension.
+1. Download the extension package from [Releases](link-to-releases).
+2. Unzip the package.
+3. Open your Chrome/Firefox browser and go to `chrome://extensions/` or `about:addons`.
+4. Enable "Developer mode."
+5. Click "Load unpacked" and select the unzipped folder.
 
-### Popup.html
-The popup.html file is the HTML file for the extension's popup window. You can customize this file as per your needs, adding any HTML, CSS, or JavaScript code required.
+VisualLingo is now installed and ready to use!
 
-### JavaScript and CSS
-The js/script.js file is where you can add your own JavaScript code. Similarly, the css/style.css file is where you can add your own CSS styles.
+### Usage
 
-## Webpack
+1. Open Google Meet in your browser.
+2. Activate the VisualLingo extension.
+3. Explore the intuitive interface to access text-to-speech and sign language translation features.
 
-This boilerplate also includes Webpack, a popular module bundler for JavaScript applications. Webpack is used to bundle all the JavaScript code and dependencies into a single file, making it easier to manage and deploy the code.
+## Contributing
 
-In this boilerplate, Webpack is configured to take src/index.js as the entry point and output the bundle to content.js. This means that all the JavaScript code written in src/index.js as well as any dependencies imported into that file will be bundled together into a single file called content.js.
+We welcome contributions! If you'd like to contribute to VisualLingo, please follow our [Contribution Guidelines](link-to-contributing.md).
 
-By using Webpack, you can take advantage of its features such as code splitting, hot module replacement, and tree shaking to optimize your code and improve the performance of your extension.
+## License
 
-To configure Webpack for your own needs, you can edit the webpack.config.js file included in this boilerplate. You can customize the entry point, output file name, and various other settings to suit your specific requirements.
+This project is licensed under the [MIT License](link-to-license).
 
-## NPM Scripts
+## Acknowledgments
 
-This boilerplate also includes a set of npm scripts that you can use to build and manage your extension. The following scripts are available:
+We would like to express our gratitude to friends and family for their guidance and support throughout the development of VisualLingo.
 
-- `npm run build-dev`: Builds the extension in development mode, using Webpack's development settings.
-- `npm run build-prod`: Builds the extension in production mode, using Webpack's production settings for code optimization and minification.
-- `npm run clean`: Removes the content.js file. All the other files of the extension are not removed.
-- `npm run watch`: Starts a Webpack watch process, automatically rebuilding the extension whenever changes are made to the source files.
+## Contact
 
-These scripts provide a convenient way to build and manage your extension, and can be customized to suit your specific needs. You can also add your own scripts to the package.json file to automate other tasks related to your extension development.
+For inquiries and support, please contact us at [your-email@example.com].
 
+---
 
-## Conclusion
-This boilerplate provides a basic structure for creating a Chrome Extension with Manifest 3. It includes the necessary files and folder structure to get started quickly, and you can customize it as per your needs.
-
-
+**Disclaimer:** VisualLingo is a project created for educational purposes as part of a thesis requirement. It is not intended for commercial use.
