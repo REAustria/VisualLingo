@@ -12,6 +12,7 @@
         box-sizing: border-box;
         margin: 0;
         padding: 0;
+        
     }
     body{
         background-color: #fff;
@@ -26,11 +27,32 @@
         color: #333;
     }
     section.header{
-        font-size: 1.3rem;
+        /* font-size: 1.3rem; */
         text-align: center;
         margin-bottom: 0.5rem;
+        background-color: #333; /* Background color of the header */
+        color: #fff; /* Text color */
+        padding: 20px; /* Padding around the header content */
+    }
+    .logo {
+        max-width: 50px; /* Set maximum width for the logo */
+        height: auto; /* Maintain aspect ratio */
+        display: inline-block; /* Ensures inline placement */
+        vertical-align: middle; /* Aligns the logo vertically */
+    }
+    h1 {
+        font-size: 2rem; /* Adjust the font size */
+        margin: 0; /* Remove default margin */
+        display: inline-block; /* Ensures inline placement */
+        vertical-align: middle;
     }
     section.description{
+        width: 100%;
+        padding: 1rem 1rem;
+        align-items: flex-end;
+
+    }
+    section.footer{
         width: 100%;
     }
     button{
@@ -40,22 +62,24 @@
         border: none;
         border-radius: 0.5rem;
         cursor: pointer;
-        background-color: #343541;
-        color: #fff;
+        background-color: #fff;
         display: block;
     }
     button:hover{
         box-shadow: 0 0 0.5rem #545567;
     }
+    .fa{
+        font-size: 50px;
+    }
 
     /* Enabled style */
     .enabled {
-    background-color: rgb(13, 190, 13);
+        color: rgb(13, 190, 13);
     }
 
     /* Disabled style */
     .disabled {
-    background-color: rgb(235, 54, 38);
+        color: rgb(235, 54, 38);
     }
 
 
@@ -63,23 +87,28 @@
 <body>
     <div id="app">
         <section class="header">
-            <img src="..\..\icons\Visuallingo.png" alt="VisualLingo" width="50" height="50">
+            <img src="..\..\icons\Visuallingo.png" alt="VisualLingo" class="logo">
             <h1>VisualLingo</h1>
-            <h6>Sign Language to Speech</h6>
+            <!-- <h4>Filipino Sign Language to Speech Google Meet Extension</h4> -->
         </section>
        
-        <section class="button">
-                <button id="enableButton" class="enabled">
-                    <i class="fa fa-power-off"></i>
-                </button>
-                <button id="disableButton" class="disabled">
-                    <i class="fa fa-power-off"></i>
-                </button>
+        <section class="description">
+                <h2 >VisualLingo</h2>
+                
+                <p>A browser extension designed to assist vocally impaired individuals during Google Meet sessions. 
+                This innovative tool, created as a thesis requirement, offers real-time speech-to-text conversion, breaking down 
+                communication barriers and fostering inclusivity in virtual meetings.
+                </p>
         </section>
 
-        <section class="description">
-            <hr><h6>Version 1.0.0</h6>
-        </section>
+        <section class="button">
+            <button id="enableButton" class="disabled">
+                <i class="fa fa-power-off" title="Turn on extension"></i>
+            </button>
+            <button id="disableButton" class="enabled">
+                <i class="fa fa-power-off" title="Turn off extension"></i>
+            </button>
+    </section>
     </div>
 </body>
 <script src="popup.js"  type="module"></script>
