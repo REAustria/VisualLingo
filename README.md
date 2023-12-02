@@ -1,6 +1,6 @@
 # VisualLingo
 
-![VisualLingo Logo](link-to-your-logo.png)
+![VisualLingo Logo](https://github.com/REAustria/VisualLingo/blob/develop/icons/Visuallingo.png)
 
 VisualLingo is a browser extension developed by BS Computer Science students from Cavite State University - Don Severino de las Alas Campus. This innovative tool is designed to assist vocally impaired individuals in communicating effectively during Google Meet sessions.
 
