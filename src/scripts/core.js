@@ -1,5 +1,4 @@
-//const URL = "https://teachablemachine.withgoogle.com/models/LDyyvxYvk/";
-const URL = "https://teachablemachine.withgoogle.com/models/tlion5YE2/";
+const URL = "https://teachablemachine.withgoogle.com/models/1QwFHEeHy/";
 let model, webcam, ctx, labelContainer, maxPredictions;
 
 
@@ -222,11 +221,6 @@ async function predict() {
     } else if (event === "Pupunta") {
       audio = new Audio(chrome.runtime.getURL("src/words/pupunta.mp3"));
       let word = "Pupunta";
-      console.log("Probability of " + word + " = " + maxProbability);
-      debounce(playTheWord(word, maxProbability), 3000);
-    } else if (event === "Kumusta") {
-      audio = new Audio(chrome.runtime.getURL("src/words/kumusta.mp3"));
-      let word = "Kumusta";
       console.log("Probability of " + word + " = " + maxProbability);
       debounce(playTheWord(word, maxProbability), 3000);
     } else {
