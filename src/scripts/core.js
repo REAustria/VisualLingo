@@ -187,42 +187,42 @@ async function predict() {
       audio = new Audio(chrome.runtime.getURL("src/words/saan.mp3"));
       let word = "Saan";
       console.log("Probability of " + word + " = " + maxProbability);
-      debounce(playTheWord(word, maxProbability), 3000);
+      debounce(speakTheWord(word, maxProbability), 3000);
     } else if (event === "Tayo") {
       audio = new Audio(chrome.runtime.getURL("src/words/tayo.mp3"));
       let word = "Tayo";
       console.log("Probability of " + word + " = " + maxProbability);
-      debounce(playTheWord(word, maxProbability), 3000);
+      debounce(speakTheWord(word, maxProbability), 3000);
     } else if (event === "Mamaya") {
       audio = new Audio(chrome.runtime.getURL("src/words/Mamaya.mp3"));
       let word = "Mamaya";
       console.log("Probability of " + word + " = " + maxProbability);
-      debounce(playTheWord(word, maxProbability), 3000);
+      debounce(speakTheWord(word, maxProbability), 3000);
     } else if (event === "Magkita") {
       audio = new Audio(chrome.runtime.getURL("src/words/magkita.mp3"));
-      let word = "Magkita";
+      let word = "Mag ki ta";
       console.log("Probability of " + word + " = " + maxProbability);
-      debounce(playTheWord(word, maxProbability), 3000);
+      debounce(speakTheWord(word, maxProbability), 3000);
     } else if (event === "Ikaw") {
       audio = new Audio(chrome.runtime.getURL("src/words/ikaw.mp3"));
-      let word = "Ikaw";
+      let word = "ekaw";
       console.log("Probability of " + word + " = " + maxProbability);
-      debounce(playTheWord(word, maxProbability), 3000);
+      debounce(speakTheWord(word, maxProbability), 3000);
     } else if (event === "Bahala") {
       audio = new Audio(chrome.runtime.getURL("src/words/bahala.mp3"));
       let word = "Bahala";
       console.log("Probability of " + word + " = " + maxProbability);
-      debounce(playTheWord(word, maxProbability), 3000);
+      debounce(speakTheWord(word, maxProbability), 3000);
     } else if (event === "Magandang Tanghali") {
       audio = new Audio(chrome.runtime.getURL("src/words/magandang_tanghali.mp3"));
       let word = "Magandang Tanghali";
       console.log("Probability of " + word + " = " + maxProbability);
-      debounce(playTheWord(word, maxProbability), 3000);
+      debounce(speakTheWord(word, maxProbability), 3000);
     } else if (event === "Pupunta") {
       audio = new Audio(chrome.runtime.getURL("src/words/pupunta.mp3"));
-      let word = "Pupunta";
+      let word = "Pu pun ta";
       console.log("Probability of " + word + " = " + maxProbability);
-      debounce(playTheWord(word, maxProbability), 3000);
+      debounce(speakTheWord(word, maxProbability), 3000);
     } else {
       // No word matched 😣
       // Don't play anything
