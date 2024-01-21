@@ -16,7 +16,7 @@ VisualLingo is a browser extension developed by BS Computer Science students fro
 
 To use VisualLingo, follow these simple steps:
 
-1. Download the extension package from [Releases](link-to-releases).
+1. Download the extension package from [Releases](https://github.com/REAustria/VisualLingo/releases).
 2. Unzip the package.
 3. Open your Chrome/Firefox browser and go to `chrome://extensions/` or `about:addons`.
 4. Enable "Developer mode."

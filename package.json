@@ -1,23 +1,16 @@
 {
-  "name": "empty-project",
+  "dependencies": {
+    "openai": "^4.20.0"
+  },
+  "name": "visuallingo",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "keywords": [],
+  "main": "content.js",
+  "devDependencies": {},
+  "scripts": {
+    "run": "node openai_mp3_generator.js"
+  },
   "author": "",
   "license": "ISC",
-  "scripts": {
-    "clean": "rm extension/content.js extension/content.js.map",
-    "build-dev": "webpack --mode development",
-    "build-prod": "webpack --mode production",
-    "watch": "webpack --mode development --watch"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.21.3",
-    "@babel/preset-env": "^7.20.2",
-    "babel-loader": "^9.1.2",
-    "terser-webpack-plugin": "^5.3.7",
-    "webpack": "^5.76.2",
-    "webpack-cli": "^5.0.1"
-  }
+  "description": "",
+  "type": "module"
 }
