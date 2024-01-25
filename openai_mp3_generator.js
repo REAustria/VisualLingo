@@ -4,13 +4,13 @@ import OpenAI from "openai";
 
 const openai = new OpenAI();
 
-const speechFile = path.resolve("./nandito.mp3");
+const speechFile = path.resolve("./kahapon.mp3");
 
 async function main() {
   const opus = await openai.audio.speech.create({
     model: "tts-1-hd",
     voice: "echo",
-    input: "nan-di-to",
+    input: "ka-ha-pon",
     speed: 0.6,
     content_type: "audio/mpeg",
   });
