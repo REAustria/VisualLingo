@@ -4,14 +4,14 @@ import OpenAI from "openai";
 
 const openai = new OpenAI();
 
-const speechFile = path.resolve("./eroplano.mp3");
+const speechFile = path.resolve("./kahapon.mp3");
 
 async function main() {
   const opus = await openai.audio.speech.create({
     model: "tts-1-hd",
     voice: "echo",
-    input: "eroplano",
-    speed: 1,
+    input: "ka-ha-pon",
+    speed: 0.6,
     content_type: "audio/mpeg",
   });
 

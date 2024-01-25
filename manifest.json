@@ -1,42 +1,42 @@
 {
-  "name": "VisualLingo",
-  "description": "Experience seamless communication in Google Meet with VisualLingo! Our innovative extension uses TensorFlow to translate Filipino Sign Language into spoken words in real time. Enhance inclusivity and accessibility in your meetings as VisualLingo bridges the gap between sign language users and verbal communication. Effortlessly understand and respond to sign language cues, fostering a more connected and inclusive virtual environment.",
-  "version": "1.0.0",
-  "manifest_version": 3,
-  "content_scripts": [{
-      "matches": [
-          "https://meet.google.com/*"
+    "name": "VisualLingo",
+    "description": "Experience seamless communication in Google Meet with VisualLingo! Our innovative extension uses TensorFlow to translate Filipino Sign Language into spoken words in real time. Enhance inclusivity and accessibility in your meetings as VisualLingo bridges the gap between sign language users and verbal communication. Effortlessly understand and respond to sign language cues, fostering a more connected and inclusive virtual environment.",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "content_scripts": [{
+        "matches": [
+            "https://meet.google.com/*"
+        ],
+        "js": [
+            "src/scripts/tf.min.js",
+            "src/scripts/teachablemachine-pose.min.js",
+            "src/scripts/core.js"
+        ]
+    }],
+      "permissions": [
+        "tabs",
+        "storage"
       ],
-      "js": [
-          "src/scripts/tf.min.js",
-          "src/scripts/teachablemachine-pose.min.js",
-          "src/scripts/core.js"
-      ]
-  }],
-  "permissions": [
-      "tabs",
-      "storage"
-  ],
-  "icons": {
-      "16": "icons/Visuallingo.png",
-      "48": "icons/Visuallingo.png",
-      "128": "icons/Visuallingo.png"
-  },
-  "action": {
-      "default_popup": "src/popup/popup.html",
-      "default_icon": {
-          "16": "icons/Visuallingo.png",
-          "48": "icons/Visuallingo.png",
-          "128": "icons/Visuallingo.png"
-      }
-  },
-  "background": {
-      "service_worker": "src/scripts/background.js"     
-  },
-  "web_accessible_resources": [
-      {
-          "resources": ["src/words/*"],
-          "matches": ["*://*/*"]
-      }
-  ]
+      "icons": {
+            "16": "icons/Visuallingo.png",
+            "48": "icons/Visuallingo.png",
+            "128": "icons/Visuallingo.png"
+      },
+      "action": {
+        "default_popup": "src/popup/popup.html",
+        "default_icon": {
+            "16": "icons/Visuallingo.png",
+            "48": "icons/Visuallingo.png",
+            "128": "icons/Visuallingo.png"
+          }
+      },
+      "background": {
+        "service_worker": "src/scripts/background.js"
+      },
+      "web_accessible_resources": [
+        {
+          "resources": [ "src/words/*" ],
+          "matches": [ "*://*/*" ]
+        }
+       ]
 }
